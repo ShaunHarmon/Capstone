@@ -10,31 +10,20 @@ using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Table;
 using System.Configuration;
 
-
-
 namespace QuickCash.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
-               
+    public class UsersController : ControllerBase             
     {
         CloudStorageAccount storageAccount = new CloudStorageAccount(new Microsoft.WindowsAzure.Storage.Auth.StorageCredentials(
         "quickcashstorage",
         "wuiAR929Q062VTEX+UYDXmN31XaxAEQLnvvIa9NVIoNYGqSXXT1ZXC1WHHdWqhP3LLvo+5aM7xZvZykQgtMHmw=="), true);
-        //CloudStorageAccount storageAccount = CloudStorageAccount.Parse(
-        //CloudConfigurationManager.GetSetting("wuiAR929Q062VTEX+UYDXmN31XaxAEQLnvvIa9NVIoNYGqSXXT1ZXC1WHHdWqhP3LLvo+5aM7xZvZykQgtMHmw=="));
-
-        //CloudStorageAccount storageAccount = CloudStorageAccount.Parse(
-        //    ConfigurationManager.ConnectionStrings["StorageConnectionString"].ConnectionString);
-
-
-
+      
         // GET: api/Users
         [HttpGet]
         public async Task<IEnumerable<UserEntity>> Get()
         {
-
             CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
             CloudTable table = tableClient.GetTableReference("users");
 
@@ -77,8 +66,7 @@ namespace QuickCash.Controllers
         {
             CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
             CloudTable table = tableClient.GetTableReference("users");
-
-            //UserEntity user1 = new UserEntity("user");
+      
             value.PartitionKey = "user";
             TableOperation insertOperation = TableOperation.Insert(value);
             TableResult result = await table.ExecuteAsync(insertOperation);

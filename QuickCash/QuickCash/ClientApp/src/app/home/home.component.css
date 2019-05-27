@@ -31,11 +31,29 @@ body {
   margin: 20px;
 }
 
-.card{
-  justify-content: center;
-  border: 2px;
+.card {
+  border: 1px solid black;
   box-shadow: 2px 5px #808080;
+  margin: 15px;
+  display: inline-grid;
+  height: 260px;
+  width: 260px;
 }
+
+.card-body{
+  margin: 5px;
+}
+
+.card-header {
+  font-size: 1.2em;
+  height: 50px;
+  width: 260px;
+  text-align: center;
+  background-color: #2d215f;
+  color: white;
+  font-weight: bold;
+}
+
 
 
 /* Custom page footer */

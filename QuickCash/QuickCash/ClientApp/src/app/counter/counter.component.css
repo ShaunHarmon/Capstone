@@ -1,0 +1,27 @@
+.card {
+  border: 1px solid black;
+  box-shadow: 2px 5px #808080;
+  margin: 15px;
+  display: inline-grid;
+  height: 260px;
+  width: 260px;
+}
+
+.card-body {
+  margin: 5px;
+}
+
+.jumbotron-fluid {
+  margin: 20px;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.card-header {
+  font-size: 1.2em;
+  height: 50px;
+  width: 260px;
+  text-align: center;
+  background-color: #2d215f;
+  color: white;
+  font-weight: bold;
+}

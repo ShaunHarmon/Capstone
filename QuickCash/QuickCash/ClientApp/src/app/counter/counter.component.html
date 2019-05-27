@@ -1,9 +1,46 @@
-<!--<h1>Counter</h1>
+<!--<div class="row card-deck">
+  <div class="col-4" *ngFor="let job of jobs">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">{{job.title}}</h3>
+        <p class="card-text">{{job.rowKey}}</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>This is a simple example of an Angular component.</p>
+<div class="container">
+  <div class="row" *ngFor="let job of jobs">
+      <div class="card col-4" >
+          <h4 class="card-title">{{job.title}}</h4>
+          <p class="card-text">{{job.description}}</p>
+      </div>
+  </div>
+</div>-->
 
-<p>Current count: <strong>{{ currentCount }}</strong></p>
+<div class="jumbotron-fluid ">
+  <h1>Job Postings</h1>
+</div>
+<div class="jumbotron-fluid">
 
-<button (click)="incrementCounter()">Increment</button>-->
+  <div class="card-deck">
+    <div class="card rounded-0" *ngFor="let job of jobs">
+      <div class="card-header text-center">{{job.title}}</div>
+      <div class="card-body align-text-top">
+        <p class="card-text">{{job.rowKey}}</p>
+      </div>
+    </div>
+  </div>
 
-  <h1>NOT IMPLEMENTED - Job Search Page</h1>
+</div>
+
+<!--<div class="container py-5">
+  <div class="card-deck">
+    <div class="card rounded-0" *ngFor="let job of jobs">
+      <div class="card-body">
+        <h4 class="card-title text-center">{{job.title}}</h4>
+        <p class="card-text">{{job.rowKey}}</p>
+      </div>
+    </div>
+  </div>
+</div>  -->
