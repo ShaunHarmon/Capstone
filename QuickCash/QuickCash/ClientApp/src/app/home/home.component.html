@@ -6,13 +6,12 @@
       <p><span class='glyphicon glyphicon-user' style="font-size: 30px; margin-right:10px"></span>{{user.firstName}}</p>
       <img src="/img/7332bde8-420c-4cd3-abe9-5d533d09307f_200x200.png" />
     </div>
-
+ 
     <div class="jumbotron-fluid ">
       <h1>Recent Postings</h1>
     </div>
 
-    <div class="jumbotron-fluid">
-      
+    <div class="jumbotron-fluid">   
         <div class="card-deck">
           <div class="card rounded-0" *ngFor="let job of jobs| slice:-4">
             <div class="card-header text-center">{{job.title}}</div>
@@ -20,8 +19,7 @@
               <p class="card-text">{{job.rowKey}}</p>
             </div>
           </div>
-        </div>
-      
+        </div>  
     </div>
     
 

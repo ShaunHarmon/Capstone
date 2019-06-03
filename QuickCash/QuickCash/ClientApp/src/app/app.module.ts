@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { LoginComponent } from './login/login.component';
 import { UserService } from './services/user.service';
+import { SelectionsService } from './services/selections.service';
 import { JobsService } from './services/jobs.service';
 import { AuthService } from './services/auth.service';
 import { RegisterComponent } from './register/register.component';
@@ -40,7 +41,7 @@ import { PostComponent } from './post/post.component';
       { path: 'post', component: PostComponent },
     ])
   ],
-  providers: [UserService, AuthService, JobsService],
+  providers: [UserService, AuthService, JobsService,SelectionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

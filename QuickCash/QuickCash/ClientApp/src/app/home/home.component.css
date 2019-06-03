@@ -13,6 +13,7 @@ body {
 
 /* Custom page header */
 .header {
+  text-align: right;
   padding-bottom: 20px;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -36,7 +37,7 @@ body {
   box-shadow: 2px 5px #808080;
   margin: 15px;
   display: inline-grid;
-  height: 260px;
+  height: 380px;
   width: 260px;
 }
 

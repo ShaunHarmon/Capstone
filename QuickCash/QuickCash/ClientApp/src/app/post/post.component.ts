@@ -26,7 +26,10 @@ export class PostComponent implements OnInit {
     private router: Router,
     private authService: AuthService,
     private route: ActivatedRoute,
-    private jobService: JobsService) { }
+    private jobService: JobsService) {
+
+    this.user = authService.user;
+  }
 
   post() {
     this.jobService.create(this.model)

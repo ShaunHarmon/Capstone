@@ -32,6 +32,11 @@
                 <span class='glyphicon glyphicon-plus'></span> Post Job
               </a>
             </li>
+            <li *ngIf="authService.loggedIn" [routerLinkActive]='["link-active"]'>
+              <a [routerLink]='["/login"]' (click)='signOut()'>
+                 Sign Out
+              </a>
+            </li>
           </ul>
         </div>
     </div>

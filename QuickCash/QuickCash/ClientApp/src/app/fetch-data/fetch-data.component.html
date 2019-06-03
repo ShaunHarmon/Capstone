@@ -1,26 +1,20 @@
-<!--<h1>Weather forecast</h1>
+<div class="container-fluid">
+  <div class="header clearfix">
+    <p><span class='glyphicon glyphicon-user' style="font-size: 30px; margin-right:10px"></span>{{user.firstName}}</p>
+    <img src="/img/7332bde8-420c-4cd3-abe9-5d533d09307f_200x200.png" />
+  </div>
+  <div class="jumbotron-fluid ">
+    <h1>My Jobs</h1>
+  </div>
 
-<p>This component demonstrates fetching data from the server.</p>
-
-<p *ngIf="!forecasts"><em>Loading...</em></p>
-
-<table class='table' *ngIf="forecasts">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Temp. (C)</th>
-      <th>Temp. (F)</th>
-      <th>Summary</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let forecast of forecasts">
-      <td>{{ forecast.dateFormatted }}</td>
-      <td>{{ forecast.temperatureC }}</td>
-      <td>{{ forecast.temperatureF }}</td>
-      <td>{{ forecast.summary }}</td>
-    </tr>
-  </tbody>
-</table>
--->
-<h1>NOT IMPLEMENTED - My Job Selections Page</h1>
+  <div class="jumbotron-fluid">
+    <div class="card-deck">
+      <div class="card rounded-0" *ngFor="let job of jobs">
+        <div class="card-header text-center">{{job.title}}</div>
+        <div class="card-body align-text-top">
+          <p class="card-text">{{job.rowKey}}</p>
+        </div>     
+      </div>
+    </div>
+  </div>
+</div>

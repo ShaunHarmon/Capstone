@@ -2,14 +2,21 @@ import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { JobsService } from '../services/jobs.service';
+import { CounterComponent } from '../counter/counter.component';
+import { SelectionsService } from '../services/selections.service';
 
 @Component({
   selector: 'app-fetch-data',
-  templateUrl: './fetch-data.component.html'
+  templateUrl: './fetch-data.component.html',
+  styleUrls: ['./fetch-data.css']
 })
 export class FetchDataComponent {
 
   public user: User;
+  public jobs: Job[];
+
+  
 
   ngOnInit(): void {
 
@@ -17,20 +24,19 @@ export class FetchDataComponent {
       this.router.navigate(['/login']);
     }
   }
-  public forecasts: WeatherForecast[];
 
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string, private router: Router, private authService: AuthService) {
-    http.get<WeatherForecast[]>(baseUrl + 'api/SampleData/WeatherForecasts').subscribe(result => {
-      this.forecasts = result;
-    }, error => console.error(error));
-  }
-}
+  constructor(
+    public authService: AuthService,
+    private router: Router,
+    private jobService: JobsService,
+    private selectionService: SelectionsService) {
 
-interface WeatherForecast {
-  dateFormatted: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
+    this.user = authService.user;
+    this.jobs = this.selectionService.selection;
+
+  } 
+  
+
 }
 
 

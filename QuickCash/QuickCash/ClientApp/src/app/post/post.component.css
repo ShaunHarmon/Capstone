@@ -1,1 +1,25 @@
 
+.header img {
+  display: block;
+  margin: auto;
+}
+
+
+.header,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  text-align: right;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron-fluid {
+  margin: 20px;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}

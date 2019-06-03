@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { JobsService } from '../services/jobs.service';
+import { SelectionsService } from '../services/selections.service';
 
 @Component({
   selector: 'app-counter-component',
@@ -12,6 +13,7 @@ export class CounterComponent {
 
   public user: User;
   public jobs: Job[];
+
 
 
   ngOnInit(): void {
@@ -32,7 +34,8 @@ export class CounterComponent {
 
   constructor(private router: Router,
     private authService: AuthService,
-    private jobService: JobsService) {
+    private jobService: JobsService,
+    private selectionService: SelectionsService) {
 
     this.user = authService.user;
   }
@@ -41,4 +44,11 @@ export class CounterComponent {
   public incrementCounter() {
     this.currentCount++;
   }
+
+  public addJob(job) {
+    //console.log(job);
+    this.selectionService.selection.push(job);
+  }
+
+
 }

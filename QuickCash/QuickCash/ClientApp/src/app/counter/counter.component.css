@@ -3,7 +3,7 @@
   box-shadow: 2px 5px #808080;
   margin: 15px;
   display: inline-grid;
-  height: 260px;
+  height: 360px;
   width: 260px;
 }
 
@@ -24,4 +24,30 @@
   background-color: #2d215f;
   color: white;
   font-weight: bold;
+}
+
+.glyphicon {
+  color: #2d215f;
+  font-size: 50px;
+}
+
+
+
+.header img {
+  display: block;
+  margin: auto;
+}
+
+
+.header,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  text-align: right;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
 }

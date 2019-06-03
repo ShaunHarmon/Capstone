@@ -17,30 +17,29 @@
       </div>
   </div>
 </div>-->
+  <div class="container-fluid">
+    <div class="header clearfix">
+      <p><span class='glyphicon glyphicon-user' style="font-size: 30px; margin-right:10px"></span>{{user.firstName}}</p>
+      <img src="/img/7332bde8-420c-4cd3-abe9-5d533d09307f_200x200.png" />
+    </div>
+    <div class="jumbotron-fluid ">
+      <h1>Job Postings</h1>
+    </div>
 
-<div class="jumbotron-fluid ">
-  <h1>Job Postings</h1>
-</div>
-<div class="jumbotron-fluid">
 
-  <div class="card-deck">
-    <div class="card rounded-0" *ngFor="let job of jobs">
-      <div class="card-header text-center">{{job.title}}</div>
-      <div class="card-body align-text-top">
-        <p class="card-text">{{job.rowKey}}</p>
+    <div class="jumbotron-fluid">
+
+      <div class="card-deck">
+        <div class="card rounded-0" *ngFor="let job of jobs">
+          <div class="card-header text-center">{{job.title}}</div>
+          <div class="card-body align-text-top">
+            <p class="card-text">{{job.rowKey}}</p>
+          </div>
+          <a  (click)='addJob(job)'>
+            <span class='glyphicon glyphicon-plus-sign'></span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
-
-</div>
-
-<!--<div class="container py-5">
-  <div class="card-deck">
-    <div class="card rounded-0" *ngFor="let job of jobs">
-      <div class="card-body">
-        <h4 class="card-title text-center">{{job.title}}</h4>
-        <p class="card-text">{{job.rowKey}}</p>
-      </div>
-    </div>
-  </div>
-</div>  -->
+ 
